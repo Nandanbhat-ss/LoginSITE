@@ -1,0 +1,72 @@
+Server running on port 3000 and accessible externally
+MySQL Connected...
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Packets out of order. Got: 0 Expected: 3
+    at Parser._tryReadPacketHeader (/root/login-app/node_modules/mysql/lib/protocol/Parser.js:470:15)
+    at Parser.write (/root/login-app/node_modules/mysql/lib/protocol/Parser.js:33:29)
+    at Protocol.write (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/root/login-app/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/root/login-app/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/root/login-app/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (node:events:517:28)
+    at Protocol._delegateError (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.handleParserError (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:380:10)
+    at Parser._tryReadPacketHeader (/root/login-app/node_modules/mysql/lib/protocol/Parser.js:478:10)
+    at Parser.write (/root/login-app/node_modules/mysql/lib/protocol/Parser.js:33:29)
+    [... lines matching original stack trace ...]
+    at Socket.emit (node:events:517:28) {
+  code: 'PROTOCOL_PACKETS_OUT_OF_ORDER',
+  fatal: true
+}
+
+Node.js v18.20.8
+Server running on port 3000 and accessible externally
+MySQL Connected...
+/root/login-app/server.js:18
+  host: '13.235.8.27,   // 🔹 replace with your EC2 public/private IP where MySQL runs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+SyntaxError: Invalid or unexpected token
+    at internalCompileFunction (node:internal/vm:76:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1283:20)
+    at Module._compile (node:internal/modules/cjs/loader:1328:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1422:10)
+    at Module.load (node:internal/modules/cjs/loader:1203:32)
+    at Module._load (node:internal/modules/cjs/loader:1019:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v18.20.8
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/root/login-app/node_modules/mysql/lib/Connection.js:94:28)
+    at Socket.<anonymous> (/root/login-app/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (node:events:529:35)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+Emitted 'error' event on Connection instance at:
+    at Connection._handleProtocolError (/root/login-app/node_modules/mysql/lib/Connection.js:423:8)
+    at Protocol.emit (node:events:517:28)
+    at Protocol._delegateError (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:398:10)
+    at Protocol.end (/root/login-app/node_modules/mysql/lib/protocol/Protocol.js:116:8)
+    at Socket.<anonymous> (/root/login-app/node_modules/mysql/lib/Connection.js:94:28)
+    [... lines matching original stack trace ...]
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+}
+
+Node.js v18.20.8
